@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :resumes
     collection do
       get :search
+      get :city
     end
     end
 

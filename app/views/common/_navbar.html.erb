@@ -78,3 +78,28 @@
     </div>
   </div>
 </div>
+
+<div class="city-change">
+	<ul class="nav navbar-nav">
+		<li style="font-size: 0.4em; color: white; margin-top: 1.5em;">
+			<% if @cuery_string.blank?%>
+				全国
+			<% else %>
+				<%= @cuery_string %>
+			<% end %>
+		</li>
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 0.5em; margin: auto;" >[切换城市]<span class="caret"></span></a>
+			<ul class="dropdown-menu" id="bootstrap-override-1">
+				<ul class="list-inline" style="30px;">
+					<li><%= link_to("全国", jobs_path, class: "bootstrap-override-2") %></li>
+					<li><%= link_to("北京", city_jobs_path(c:"北京"), class: "bootstrap-override-2") %></li>
+					<li><%= link_to("上海", city_jobs_path(c:"上海"), class: "bootstrap-override-2") %></li>
+					<li><%= link_to("深圳", city_jobs_path(c:"深圳"), class: "bootstrap-override-2") %></li>
+					<li><%= link_to("广州", city_jobs_path(c:"广州"), class: "bootstrap-override-2") %></li>
+					<li><%= link_to("厦门", city_jobs_path(c:"厦门"), class: "bootstrap-override-2") %></li>
+				</ul>
+			</ul>
+		</li>
+	</ul>
+</div>
